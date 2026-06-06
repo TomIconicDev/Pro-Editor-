@@ -1,0 +1,46 @@
+/* Custom App Engine Overrides */
+html, body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0a0a0a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+}
+
+/* Custom UI Range Input Track Optimization for iOS Safari */
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ea580c; /* Tailwind Orange 600 */
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(234, 88, 12, 0.5);
+    transition: transform 0.1s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(1.25);
+}
+
+/* Custom Scrollbar styling for options panels */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(234, 88, 12, 0.3);
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(234, 88, 12, 0.6);
+}
